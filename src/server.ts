@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 import helmet from 'helmet'
 import { urlencoded, json } from 'body-parser'
 import { join } from 'path'
-import insertDocument from './database/createDocument'
+import createDocument from './database/createDocument'
 
 const avaible_languages: string[] = ['txt', 'javascript', 'lua', 'html', 'scss', 'css']
 const config = require('../config.json')
@@ -32,12 +32,16 @@ mongoose.connect(
 
 app.get('/', (req, res) => res.render('index'))
 app.post('/create', async (req, res) => {
-    const { data, language } = req.body
+    const { data, language, title } = req.body
     
-    if (!data || !language || !avaible_languages.includes(language)) 
-        return res.status(400).send('Invalid body.')
+    if (!data || 
+        data.length < 1 || 
+        !language || 
+        !title || 
+        !avaible_languages.includes(language)
+    ) return res.status(400).send('Invalid body.')
 
-    res.json(await insertDocument({ data: data, language: language }))
+    res.json(await createDocument({ data: data, language: language, title: title }))
 })
 
 app.listen(config.port, () => console.log(`⚡️ Server is ready! (http://localhost:${config.port})`))
