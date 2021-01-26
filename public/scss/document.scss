@@ -47,7 +47,6 @@ body {
         outline: none;
         border: none;
         background: rgb(27, 31, 36);
-        color: white;
         transition: color .2s;
         border-radius: 5px;
         font-family: 'Montserrat', sans-serif;
@@ -59,6 +58,7 @@ body {
         width: calc(80vw + 40px);
 
         #title {
+            color: white;
             text-align: center;
             width: 80%;
             height: 30px;
@@ -66,6 +66,7 @@ body {
         }
 
         #back {
+            color: white;
             text-align: center;
             width: 20%;
             cursor: pointer;
@@ -75,17 +76,21 @@ body {
             }
         }
         #language {
+            color: white;
             text-align: center;
             width: 20%;
         }
     }
     #code {
+        padding: 0 10px;
+    }
+    #code * {
         font-family: 'Consolas';
         width: 80vw;
+        background: rgb(27, 31, 36) !important;
         height: calc(100vh - 160px);
         font-size: 20px;
         resize: none;
-        color: #ABB2BF;
     }
     textarea {
         padding: 20px 20px;

@@ -8,17 +8,22 @@ html(lang="en")
         link(rel="preconnect" href="https://fonts.gstatic.com")
         link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet")
         link(rel="icon" href="/assets/logo.png")
+        link(rel="stylesheet", href="/assets/atom-one-dark.css")
+        script(src="/js/highlight.pack.js")
+        <script>hljs.initHighlightingOnLoad();</script>
     body
         #navbar
             input#language(class="input" type="button" value=document.language)
             input#title(class="input" type="text" name="Title" placeholder="Title..." value=document.title disabled)
             input#back(class="input" type="button" value="Back")
-        textarea#code(
+        - const cl = `input ${document.language}`
+        pre#code(
             spellcheck="false"
             placeholder="type here..."
             cols="10"
             rows="10"
             class="lined input"
             disabled
-        ) #{document.data}
+        ) 
+            code(class=cl) #{document.data}
     script(src="/js/document.js")
