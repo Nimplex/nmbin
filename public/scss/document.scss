@@ -83,12 +83,13 @@ body {
     }
     #code {
         padding: 0 10px;
+        padding-bottom: 15px;
     }
     #code * {
-        font-family: 'Consolas';
+        font-family: 'Consolas' !important;
         width: 80vw;
         background: rgb(27, 31, 36) !important;
-        height: calc(100vh - 160px);
+        height: calc(100vh - 175px);
         font-size: 20px;
         resize: none;
     }
