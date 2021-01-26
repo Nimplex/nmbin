@@ -10,7 +10,9 @@ html(lang="en")
         link(rel="icon" href="/assets/logo.png")
     body
         #navbar
-            input#title(class="input" type="text", name="Title", placeholder="Title..." value=document.title disabled)
+            input#language(class="input" type="button" value=document.language)
+            input#title(class="input" type="text" name="Title" placeholder="Title..." value=document.title disabled)
+            input#back(class="input" type="button" value="Back")
         textarea#code(
             spellcheck="false"
             placeholder="type here..."
@@ -19,3 +21,4 @@ html(lang="en")
             class="lined input"
             disabled
         ) #{document.data}
+    script(src="/js/document.js")

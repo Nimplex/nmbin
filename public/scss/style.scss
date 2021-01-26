@@ -58,6 +58,8 @@ body {
         color: white;
         transition: color .2s;
         border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
     }
 
     #navbar {
@@ -67,20 +69,15 @@ body {
 
         #language {
             width: 20%;
-            text-align: center;
             text-align-last: center;
             -moz-text-align-last: center;
         }
         #title {
-            font-family: 'Montserrat', sans-serif;
-            text-align: center;
             width: 80%;
             height: 30px;
             margin: 0px 20px;
         }
         #submit {
-            font-family: 'Montserrat', sans-serif;
-            text-align: center;
             width: 20%;
             cursor: pointer;
             &:hover {
@@ -91,6 +88,7 @@ body {
     }
     #code {
         font-family: 'Consolas';
+        text-align: left;
         width: 80vw;
         height: calc(100vh - 160px);
         font-size: 20px;

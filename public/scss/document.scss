@@ -50,19 +50,33 @@ body {
         color: white;
         transition: color .2s;
         border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
     }
 
     #navbar {
         display: inline-flex;
         margin: 40px 0;
-        width: calc(80vw + 80px);
+        width: calc(80vw + 40px);
 
         #title {
-            font-family: 'Montserrat', sans-serif;
             text-align: center;
-            width: 100%;
+            width: 80%;
             height: 30px;
             margin: 0px 20px;
+        }
+
+        #back {
+            text-align: center;
+            width: 20%;
+            cursor: pointer;
+            &:hover {
+                transition: color .2s;
+                color: #ABB2BF;
+            }
+        }
+        #language {
+            text-align: center;
+            width: 20%;
         }
     }
     #code {
