@@ -1,14 +1,14 @@
 {
-    "name": "personal-website",
+    "name": "nmbin",
     "version": "1.0.0",
-    "description": "Personal website",
+    "description": "nmbin",
     "main": "dist/server.js",
     "scripts": {
         "build": "gulp"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Nimplex/personal-website.git"
+        "url": "git+https://github.com/Nimplex/nmbin.git"
     },
     "keywords": [
         "typescript",
