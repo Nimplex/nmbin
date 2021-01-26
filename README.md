@@ -1,10 +1,11 @@
-# nmbin
-[website](https://bin.nimplex.xyz)<br/>
+# [nmbin](https://bin.nimplex.xyz)
 Place for your code.
 
 # Requirements
+```
 1. MongoDB database.
 2. Node v11+.
+```
 
 # Installation
 1. Create file called `config.json` in project's root directory.
@@ -26,3 +27,6 @@ Place for your code.
 `npm run build`
 4. Run server.
 `node dist/server.js`
+
+# Screenshot
+![Screenshot](/public/assets/screenshot.png)
