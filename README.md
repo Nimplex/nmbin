@@ -29,4 +29,5 @@ Place for your code.
 `node dist/server.js`
 
 # Screenshot
+
 ![Screenshot](/public/assets/screenshot.png)
