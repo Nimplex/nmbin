@@ -43,9 +43,10 @@ app.post('/create', async (req, res) => {
     const { data, language, title } = req.body
     
     if (!data || 
-        data.length < 1 || 
-        !language || 
-        !title || 
+        data.replace(/[\n ]/gm, '').length < 1 ||
+        !language ||
+        !title ||
+        title.replace(/[\n ]/gm, '').length < 1 ||
         !avaible_languages.includes(language)
     ) return res.status(400).send('Invalid body.')
 

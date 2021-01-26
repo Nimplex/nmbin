@@ -5,8 +5,8 @@ submit.addEventListener('click', async () => {
     const title = document.getElementById('title').value
     const code = document.getElementById('code').value
 
-    if (title.length < 1) return alert('Too short title.')
-    if (code.length < 1) return alert('Too short title.')
+    if (title.replace(/[\n ]/gm, '').length < 1) return alert('Too short title.')
+    if (code.replace(/[\n ]/gm, '').length < 1) return alert('Too short title.')
 
     fetch('/create', 
         { 
