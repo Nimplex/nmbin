@@ -1,5 +1,10 @@
 # nmbin
 Place for your code.
+
+# Requirements
+1. MongoDB database.
+2. Node v11+.
+
 # Installation
 1. Create file called `config.json` in project's root directory.
 ```json
