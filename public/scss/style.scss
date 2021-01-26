@@ -57,15 +57,15 @@ body {
         background: rgb(27, 31, 36);
         color: white;
         transition: color .2s;
+        border-radius: 5px;
     }
 
     #navbar {
         display: inline-flex;
         margin: 40px 0;
-        width: 50vw;
+        width: calc(80vw + 40px);
 
         #language {
-            border-radius: 5px;
             width: 20%;
             text-align: center;
             text-align-last: center;
@@ -76,14 +76,12 @@ body {
             text-align: center;
             width: 80%;
             height: 30px;
-            border-radius: 5px;
             margin: 0px 20px;
         }
         #submit {
             font-family: 'Montserrat', sans-serif;
             text-align: center;
             width: 20%;
-            border-radius: 5px;
             cursor: pointer;
             &:hover {
                 transition: color .2s;
@@ -93,10 +91,13 @@ body {
     }
     #code {
         font-family: 'Consolas';
-        width: 99vw;
-        height: calc(100vh - 120px);
+        width: 80vw;
+        height: calc(100vh - 160px);
         font-size: 20px;
         resize: none;
         color: #ABB2BF;
+    }
+    textarea {
+        padding: 20px 20px;
     }
 }
