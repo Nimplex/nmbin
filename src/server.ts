@@ -1,11 +1,17 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import helmet from 'helmet'
+import getDocument from './database/getDocument'
+import createDocument from './database/createDocument'
+import limiter from 'express-rate-limit'
 import { urlencoded, json } from 'body-parser'
 import { join } from 'path'
-import createDocument from './database/createDocument'
-import getDocument from './database/getDocument'
 
+const createLimiter = limiter({
+    windowMs: 10 * 60 * 1000,
+    max: 30,
+    message: `'Too many requests (30), please try again later (in 10 minutes).`
+});
 const avaible_languages: string[] = ['txt', 'javascript', 'lua', 'html', 'scss', 'css', 'typescript']
 const config = require('../config.json')
 const app = express()
@@ -39,7 +45,7 @@ app.get('/:id', async (req, res) => {
     if (!document) res.redirect('/')
     else res.render('document', { document: document })
 })
-app.post('/create', async (req, res) => {
+app.post('/create', createLimiter, async (req, res) => {
     const { data, language, title } = req.body
     
     if (!data || 
