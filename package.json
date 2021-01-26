@@ -1,0 +1,43 @@
+{
+    "name": "personal-website",
+    "version": "1.0.0",
+    "description": "Personal website",
+    "main": "dist/server.js",
+    "scripts": {
+        "build": "gulp"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Nimplex/personal-website.git"
+    },
+    "keywords": [
+        "typescript",
+        "javascript",
+        "gulp",
+        "website",
+        "express"
+    ],
+    "author": "Nimplex",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/Nimplex/personal-website/issues"
+    },
+    "homepage": "https://github.com/Nimplex/personal-website#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "mongoose": "^5.11.13",
+        "pug": "^3.0.0"
+    },
+    "devDependencies": {
+        "@types/body-parser": "^1.19.0",
+        "@types/express": "^4.17.11",
+        "@types/mongoose": "^5.10.3",
+        "@types/node": "^14.14.22",
+        "del": "^6.0.0",
+        "gulp": "^4.0.2",
+        "gulp-sass": "^4.1.0",
+        "gulp-typescript": "^6.0.0-alpha.1",
+        "typescript": "^4.1.3"
+    }
+}
