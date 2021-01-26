@@ -4,6 +4,7 @@ import helmet from 'helmet'
 import { urlencoded, json } from 'body-parser'
 import { join } from 'path'
 import createDocument from './database/createDocument'
+import getDocument from './database/getDocument'
 
 const avaible_languages: string[] = ['txt', 'javascript', 'lua', 'html', 'scss', 'css', 'typescript']
 const config = require('../config.json')
@@ -31,6 +32,13 @@ mongoose.connect(
 })
 
 app.get('/', (req, res) => res.render('index'))
+app.get('/:id', async (req, res) => {
+    const { id } = req.params
+    const document = await getDocument(id)
+
+    if (!document) res.redirect('/')
+    else res.render('document', { document: document })
+})
 app.post('/create', async (req, res) => {
     const { data, language, title } = req.body
     
