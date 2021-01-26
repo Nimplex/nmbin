@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+/public/assets/atom-one-dark.css linguist-vendored
+/public/js/highlight.pack.js linguist-vendored
