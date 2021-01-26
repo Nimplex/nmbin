@@ -5,7 +5,7 @@ import { urlencoded, json } from 'body-parser'
 import { join } from 'path'
 import createDocument from './database/createDocument'
 
-const avaible_languages: string[] = ['txt', 'javascript', 'lua', 'html', 'scss', 'css']
+const avaible_languages: string[] = ['txt', 'javascript', 'lua', 'html', 'scss', 'css', 'typescript']
 const config = require('../config.json')
 const app = express()
 app.use(helmet())

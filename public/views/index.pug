@@ -5,6 +5,25 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title nmbin - Home
         link(rel="stylesheet", href="/css/style.css")
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet")
     body(class="preload")
-    
+        #navbar
+            select#language(class="input" name="language")
+                option(value="txt") Text
+                option(value="javascript") JavaScript
+                option(value="typescript") TypeScript
+                option(value="css") CSS
+                option(value="scss") SCSS
+                option(value="html") HTML
+                option(value="lua") Lua
+            input#title(class="input" type="text", name="Title", placeholder="Title...")
+            input#submit(class="input" type="button", value="Submit")
+        textarea#code(
+            spellcheck="false"
+            placeholder="type here..."
+            cols="10"
+            rows="10"
+            class="lined input"
+        )
         script(src="/js/preload.js")

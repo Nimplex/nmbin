@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Consolas';
+    src: url('/assets/Consolas.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -38,4 +46,57 @@ body {
     padding: 0;
     background: #292f36;
     color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .input {
+        outline: none;
+        border: none;
+        background: rgb(27, 31, 36);
+        color: white;
+        transition: color .2s;
+    }
+
+    #navbar {
+        display: inline-flex;
+        margin: 40px 0;
+        width: 50vw;
+
+        #language {
+            border-radius: 5px;
+            width: 20%;
+            text-align: center;
+            text-align-last: center;
+            -moz-text-align-last: center;
+        }
+        #title {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            width: 80%;
+            height: 30px;
+            border-radius: 5px;
+            margin: 0px 20px;
+        }
+        #submit {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            width: 20%;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover {
+                transition: color .2s;
+                color: #ABB2BF;
+            }
+        }
+    }
+    #code {
+        font-family: 'Consolas';
+        width: 99vw;
+        height: calc(100vh - 120px);
+        font-size: 20px;
+        resize: none;
+        color: #ABB2BF;
+    }
 }
