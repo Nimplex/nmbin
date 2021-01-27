@@ -19,11 +19,24 @@ html
                 option(value="html") HTML
                 option(value="xml") XML
                 option(value="lua") Lua
+                option(value="go") Golang
                 option(value="c") C
+                option(value="bash") Bash
+                option(value="batch") Batch
+                option(value="json") JSON
                 option(value="php") PHP
                 option(value="python") Python
-            input#title(class="input" type="text" name="Title" placeholder="Title...")
-            input#submit(class="input" type="button" value="Submit")
+            input#title(
+                class="input"
+                type="text"
+                name="Title"
+                placeholder="Title..."
+            )
+            input#submit(
+                class="input"
+                type="button"
+                value="Submit"
+            )
         textarea#code(
             spellcheck="false"
             placeholder="type here..."

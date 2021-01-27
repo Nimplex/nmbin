@@ -12,7 +12,7 @@ const createLimiter = limiter({
     max: 30,
     message: `'Too many requests (30), please try again later (in 10 minutes).`
 });
-const avaible_languages: string[] = ['txt', 'javascript', 'lua', 'html', 'scss', 'css', 'typescript', 'xml', 'python', 'php', 'c']
+const avaible_languages: string[] = ['bash', 'batch', 'json', 'go', 'txt', 'javascript', 'lua', 'html', 'scss', 'css', 'typescript', 'xml', 'python', 'php', 'c']
 const config = require('../config.json')
 const app = express()
 app.use(helmet({ contentSecurityPolicy: false }))

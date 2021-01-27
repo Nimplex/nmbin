@@ -12,11 +12,28 @@ html
         script(src="/js/highlight.pack.js")
         <script>hljs.initHighlightingOnLoad();</script>
     body
-        #navbar
-            input#language(class="input" type="button" value=document.language)
-            input#title(class="input" type="text" name="Title" placeholder="Title..." value=document.title disabled)
-            input#back(class="input" type="button" value="Back")
         - const cl = `input ${document.language}`
+
+        #navbar
+            input#language(
+                class="input"
+                type="text"
+                value=document.language
+                disabled
+            )
+            input#title(
+                class="input"
+                type="text"
+                name="Title"
+                placeholder="Title..."
+                value=document.title
+                disabled
+            )
+            input#back(
+                class="input"
+                type="button"
+                value="Back"
+            )
         pre#code(
             spellcheck="false"
             placeholder="type here..."
