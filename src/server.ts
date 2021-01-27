@@ -45,6 +45,16 @@ app.get('/:id', async (req, res) => {
     if (!document) res.redirect('/')
     else res.render('document', { document: document })
 })
+app.get('/raw/:id', async (req, res) => {
+    const { id } = req.params
+    const { q } = req.query
+
+    const document = await getDocument(id)
+
+    if (!document) res.redirect('/')
+    else if (q) res.send(document.data.replace(/[\n]/gm, '<br/>'))
+    else if (!q) res.send(document.data)
+})
 app.post('/create', createLimiter, async (req, res) => {
     const { data, language, title } = req.body
     
