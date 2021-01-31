@@ -4,7 +4,9 @@ submit.addEventListener('click', async () => {
     const lang = document.getElementById('language').value
     const title = document.getElementById('title').value
     const code = document.getElementById('code').value
-
+    
+    if (!code || !title || !lang) return
+    
     if (title.replace(/[\n ]/gm, '').length < 1) return alert('Too short title.')
     if (code.replace(/[\n ]/gm, '').length < 1) return alert('Too short title.')
 
