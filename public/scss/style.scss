@@ -58,6 +58,7 @@ body {
         color: white;
         transition: color .2s;
         border-radius: 5px;
+        font-size: 15px;
         font-family: 'Montserrat', sans-serif;
         text-align: center;
     }
@@ -74,12 +75,13 @@ body {
         }
         #title {
             width: 80%;
-            height: 30px;
+            height: 38px;
             margin: 0px 20px;
         }
         #submit {
             width: 20%;
             cursor: pointer;
+
             &:hover {
                 transition: color .2s;
                 color: #ABB2BF;

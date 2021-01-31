@@ -47,6 +47,7 @@ body {
         outline: none;
         border: none;
         background: rgb(27, 31, 36);
+        font-size: 15px;
         transition: color .2s;
         border-radius: 5px;
         font-family: 'Montserrat', sans-serif;
@@ -61,7 +62,7 @@ body {
             color: white;
             text-align: center;
             width: 80%;
-            height: 30px;
+            height: 38px;
             margin: 0px 20px;
         }
 
@@ -70,6 +71,7 @@ body {
             text-align: center;
             width: 20%;
             cursor: pointer;
+
             &:hover {
                 transition: color .2s;
                 color: #ABB2BF;
