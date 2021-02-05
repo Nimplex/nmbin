@@ -1,4 +1,5 @@
 # [nmbin](https://bin.nimplex.xyz)
+[![CodeFactor](https://www.codefactor.io/repository/github/nimplex/nmbin/badge)](https://www.codefactor.io/repository/github/nimplex/nmbin)
 Place for your code.
 
 # Requirements
