@@ -23,13 +23,13 @@ app.set('views', join(__dirname, '..', 'public', 'views'))
 app.set('view engine', 'pug')
 
 mongoose.connect(
-    `mongodb://${config.mongo.ip}/${config.mongo.database}`, 
-    { 
-        useNewUrlParser: true, 
-        useUnifiedTopology: true, 
+    `mongodb://${config.mongo.ip}/${config.mongo.database}`,
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
         authSource: config.mongo.authDatabase,
-        user: config.mongo.username, 
-        pass: config.mongo.password 
+        user: config.mongo.username,
+        pass: config.mongo.password
     }
 ).then(() => {
     console.log(`⚡️ MongoDB connected`)
@@ -58,7 +58,7 @@ app.get('/raw/:id', async (req, res) => {
 app.post('/create', createLimiter, async (req, res) => {
     const { data, language, title } = req.body
     
-    if (!data || 
+    if (!data ||
         data.replace(/[\n ]/gm, '').length < 1 ||
         !language ||
         !title ||
