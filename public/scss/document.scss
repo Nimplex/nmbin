@@ -16,17 +16,17 @@
     height: 4px;
 }
 ::-webkit-scrollbar-button {
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
 }
 ::-webkit-scrollbar-thumb {
     background: #e1e1e1;
-    border: 0px none #ffffff;
+    border: 0 none #ffffff;
     border-radius: 50px;
 }
 ::-webkit-scrollbar-track {
     background: #666666;
-    border: 0px none #ffffff;
+    border: 0 none #ffffff;
     border-radius: 50px;
 }
 ::-webkit-scrollbar-corner {
@@ -63,7 +63,7 @@ body {
             text-align: center;
             width: 80%;
             height: 38px;
-            margin: 0px 20px;
+            margin: 0 20px;
         }
 
         #back {
@@ -96,6 +96,6 @@ body {
         resize: none;
     }
     textarea {
-        padding: 20px 20px;
+        padding: 20px;
     }
 }
